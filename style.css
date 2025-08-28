@@ -1,0 +1,416 @@
+body {
+  margin: 0;
+  /* Commanding headers */
+h1, h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+body, h1, h2, h3, h4, p, li, a, select, option, button {
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.9);
+}
+
+
+/* Tactical labels and nav */
+nav a, h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4em;
+}
+
+/* Mission logs and body text */
+body, p, li {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+h1 {
+  text-shadow: 2px 2px 5px #000;
+}
+
+letter-spacing: 2px;
+text-transform: uppercase;
+
+
+  background-color: black;
+  background-image: 
+    url(''),
+     /* Your image path */
+    linear-gradient(to right, rgb(255, 0, 0) 1px, transparent 2px),
+    linear-gradient(to bottom, rgb(255, 0, 0) 1px, transparent 1px);
+  background-size: auto, 30px 30px, 30px 30px;
+  background-repeat: no-repeat, repeat, repeat;
+  background-position: absolute, 0 0, 0 0;
+  
+
+}
+
+/* ---------------------------------For Background Video {video by Federico Sarnovich on Youtube}------------------------------------------------ */
+#backgroundvideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: -1;
+  opacity: 0.7;  
+}
+
+
+
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent }
+  50% { border-color: #f44336 }
+}
+
+.typing-header {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 2.5em;
+  color: #acacac;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #eeeeee;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
+}
+
+
+
+@keyframes hudPulse {
+  0%, 100% { text-shadow: 0 0 2px rgb(255, 0, 0), 0 0 10px rgb(255, 43, 6); opacity: 1; }
+  50% { text-shadow: 0 0 4px rgb(255, 0, 0), 0 0 20px rgb(255, 0, 0); opacity: 0.8; }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(0); opacity: 0.1; }
+  50% { transform: translateY(5px); opacity: 0.3; }
+  100% { transform: translateY(0); opacity: 0.1; }
+}
+
+h1, h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: 3em;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: hudPulse 2s infinite ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional scanline overlay */
+h1::after, h2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 255, 255, 0.05),
+    rgba(0, 255, 255, 0.05) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+  animation: scanline 1.5s infinite linear;
+  pointer-events: none;
+}
+
+
+
+
+
+.company-panel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  background: #1a1a1a;
+  color: #f0f0f0;
+  transition: right 0.5s ease;
+  z-index: 1000;
+  overflow-y: auto;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.6);
+}
+
+.company-panel.active {
+  right: 0;
+}
+
+.panel-content {
+  padding: 2rem;
+}
+      /* Loader Styles */
+      #loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #0a0a0a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+
+      .spinner {
+        border: 6px solid #222;
+        border-top: 6px solid #f44336;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      body {
+        margin: 0;
+        font-family: "Orbitron", sans-serif;
+        background-color: #0a0a0a;
+        color: #f44336;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      header {
+        background-color: #1a1a1a;
+        padding: 40px;
+        text-align: center;
+        border-bottom: 2px solid #f44336;
+        z-index: 2;
+        position: relative;
+      }
+
+      h1 {
+        font-size: 3em;
+        margin: 0;
+      }
+
+      h2 {
+        font-size: 1.5em;
+        margin-top: 10px;
+        color: #ccc;
+      }
+
+      nav {
+        background-color: #111;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        border-bottom: 1px solid #f44336;
+        z-index: 2;
+        position: relative;
+      }
+
+      nav a {
+        color: #f44336;
+        text-decoration: none;
+        margin: 0 20px;
+        font-weight: bold;
+      }
+
+      section {
+        padding: 60px;
+        text-align: center;
+        z-index: 2;
+        position: relative;
+      }
+
+      section.join {
+        padding: 60px;
+        text-align: center;
+        height: 300px;
+        width: 200px;
+        z-index: 2;
+        position: relative;
+      }
+
+      section#video {
+        background-color: #1a1a1a;
+        border: 2px solid #f44336;
+        margin: 40px auto;
+        padding: 20px;
+        max-width: 950px;
+      }
+
+      .company {
+        border: 2px solid #f44336;
+        padding: 20px;
+        margin-bottom: 30px;
+        background-color: #1a1a1a;
+      }
+
+      .company h3 {
+        color: #fff;
+        font-size: 1.8em;
+      }
+
+      .company p {
+        font-size: 1.2em;
+        color: #ccc;
+      }
+
+      iframe {
+        border: none;
+        width: 100%;
+        height: 500px;
+        background: #1a1a1a;
+        border: #f44336 2px solid;
+      }
+
+      
+
+  
+
+     
+/* ----------------------------------------------------------------------------footer-------------------------------------------------------- */
+      footer {
+        background-color: #1a1a1a;
+        text-align: center;
+        padding: 20px;
+        color: #777;
+        font-size: 0.9em;
+        z-index: 2;
+        position: relative;
+      }
+
+      /* ----------------------------------------------------------------Gridline Overlay-------------------------------------------------------------------------- */
+      #grid-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .gridline {
+        position: absolute;
+        background-color: rgb(255, 4, 4);
+      }
+
+      .lat {
+        width: 100%;
+        height: 2px;
+        margin: 0;
+      }
+
+      .lon {
+        height: 100%;
+        width: 2px;
+        margin: 0;
+      }
+/* ----------------------------------------------------company details button hover effect---------------------------------------------------------------------- */
+      nav a:hover {
+        color: #fff;
+        text-shadow: 0 0 5px #f44336;
+        transform: scale(1.1);
+        transition: all 0.3s ease;
+      }
+
+      .company:hover {
+        box-shadow: 0 0 15px #f44336;
+        transform: translateY(-5px);
+        transition: all 0.3s ease;
+      }
+ /* -------------------------------------------------------Left side pop up detail panel-------------------------------------------------------------------------- */
+      .details-panel {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 600px;
+  height: 100%;
+  background-color: #1a1a1a;
+  color: #f44336;
+  padding: 30px;
+  box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+  transition: left 0.5s ease;
+  z-index: 10000;
+  overflow-y: auto;
+}
+
+.details-panel.active {
+  left: 0;
+}
+
+/* -----------------------------------------------------------For the drop down menu to select campaing and it's detail and video------------------------------------------------------- */
+select {
+  background-color: #1a1a1a;
+  color: #f44336;
+  border: 2px solid #f44336;
+  padding: 10px 15px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2em;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+select:hover {
+  box-shadow: 0 0 10px #f44336;
+}
+
+option {
+  background-color: #0a0a0a;
+  color: #f44336;
+}
+
+.opDesription {
+  margin-top: 20px;
+  font-size: 1.1em;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+ 
+
+/* ------------------------------------------------For close button --------------------------------------------------*/
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  color: #f44336;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: #ff7961;
+}
+/*----------------------------------------------------------- I don't why it's not working ----------------------------------------------------------*/
+#backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 2;
+  display: none;
+}
+#backdrop.active {
+  display: block;
+}
+
+
