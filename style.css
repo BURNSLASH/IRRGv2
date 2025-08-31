@@ -56,7 +56,7 @@ text-transform: uppercase;
   object-fit: cover;
   overflow-y: auto;
   overflow-x: hidden;
-  z-index: 0;
+  z-index: -1;
   opacity: 0.7;  
 }
 
@@ -412,6 +412,7 @@ option {
 #backdrop.active {
   display: block;
 }
+
 
 
 
