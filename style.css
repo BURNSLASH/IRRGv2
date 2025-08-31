@@ -184,7 +184,7 @@ h1::after, h2::after {
       body {
         margin: 0;
         font-family: "Orbitron", sans-serif;
-        background-color: #0a0a0a;
+        
         color: #f44336;
         position: relative;
         overflow-x: hidden;
@@ -412,6 +412,7 @@ option {
 #backdrop.active {
   display: block;
 }
+
 
 
 
